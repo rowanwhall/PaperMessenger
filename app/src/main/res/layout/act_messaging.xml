@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorPrimary">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/act_messaging_tb"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/ToolbarStyle"
+        android:elevation="4dp"
+        tools:ignore="UnusedAttribute"/>
+
+    <personal.rowan.paperforspotify.ui.view.ChatSongHeader
+        android:id="@+id/act_messaging_song_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act_messaging_tb"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/act_messaging_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/act_messaging_song_header_view"
+        android:layout_above="@+id/act_messaging_composer_view"/>
+
+    <personal.rowan.paperforspotify.ui.view.ChatComposer
+        android:id="@+id/act_messaging_composer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"/>
+
+</RelativeLayout>

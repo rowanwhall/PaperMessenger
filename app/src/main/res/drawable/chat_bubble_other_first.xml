@@ -1,0 +1,15 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/chatBubbleOther"
+        android:angle="270" />
+    <corners
+        android:topLeftRadius="@dimen/chat_bubble_corner_radius_rounded"
+        android:bottomLeftRadius="@dimen/chat_bubble_corner_radius_sharp"
+        android:bottomRightRadius="@dimen/chat_bubble_corner_radius_rounded"
+        android:topRightRadius="@dimen/chat_bubble_corner_radius_rounded" />
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+</shape>

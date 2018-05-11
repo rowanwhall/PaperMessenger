@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColorPrimary"
+    android:gravity="end">
+
+    <TextView
+        android:id="@+id/viewholder_message_list_timestamp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/textColorPrimaryLight"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        tools:text="Mon 2016"/>
+
+    <View
+        android:id="@+id/viewholder_message_list_placeholder_view"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"/>
+
+    <LinearLayout
+        android:id="@+id/viewholder_message_list_container_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/chat_bubble_self_first">
+
+        <TextView
+            android:id="@+id/viewholder_message_list_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@color/textColorPrimary"
+            android:autoLink="all"
+            android:linksClickable="true"
+            tools:text="message!"
+            android:textSize="14sp"/>
+
+        <RelativeLayout
+            android:id="@+id/viewholder_message_list_song_container_rl"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginTop="4dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_gravity="end">
+
+            <ImageView
+                android:id="@+id/viewholder_message_list_song_iv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/content_description_viewholder_spotify_song_search_iv"/>
+
+            <TextView
+                android:id="@+id/viewholder_message_list_song_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_toRightOf="@id/viewholder_message_list_song_iv"
+                android:layout_toEndOf="@id/viewholder_message_list_song_iv"
+                tools:text="Song Name"/>
+
+            <TextView
+                android:id="@+id/viewholder_message_list_artist_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimaryLight"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_toRightOf="@id/viewholder_message_list_song_iv"
+                android:layout_toEndOf="@id/viewholder_message_list_song_iv"
+                android:layout_below="@id/viewholder_message_list_song_name_tv"
+                tools:text="Artist Name"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/viewholder_message_list_read_receipt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textSize="12sp"
+        android:textColor="@color/textColorPrimaryLight"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="4dp"
+        tools:text="Seen by Ashtyn"/>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:animateLayoutChanges="true">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dialog_frag_spotify_song_search_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toLeftOf="@+id/dialog_frag_spotify_song_search_btn"
+        android:layout_toStartOf="@+id/dialog_frag_spotify_song_search_btn">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/dialog_frag_spotify_song_search_tiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:hint="@string/dialog_frag_spotify_song_search_tiet_hint"
+            android:maxLines="1"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:imeOptions="actionDone"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:id="@+id/dialog_frag_spotify_song_search_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorDivider"
+        android:layout_below="@id/dialog_frag_spotify_song_search_til"/>
+
+    <Button
+        android:id="@+id/dialog_frag_spotify_song_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/dialog_frag_spotify_song_search_button_search"
+        android:textColor="@color/textColorButtonFlat"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dialog_frag_spotify_song_search_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_frag_spotify_song_search_divider"/>
+
+    <ProgressBar
+        android:id="@+id/dialog_frag_spotify_song_search_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/dialog_frag_spotify_song_search_divider"
+        android:layout_margin="12dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

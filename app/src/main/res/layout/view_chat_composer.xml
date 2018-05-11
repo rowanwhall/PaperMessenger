@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="@color/white"
+    android:elevation="4dp"
+    android:animateLayoutChanges="true"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:id="@+id/view_chat_composer_song_detail_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/view_chat_composer_song_iv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/content_description_viewholder_spotify_song_search_iv"/>
+
+        <TextView
+            android:id="@+id/view_chat_composer_song_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_toRightOf="@id/view_chat_composer_song_iv"
+            android:layout_toEndOf="@id/view_chat_composer_song_iv"
+            tools:text="Song Name"/>
+
+        <TextView
+            android:id="@+id/view_chat_composer_artist_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorPrimaryLight"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_toRightOf="@id/view_chat_composer_song_iv"
+            android:layout_toEndOf="@id/view_chat_composer_song_iv"
+            android:layout_below="@id/view_chat_composer_song_name_tv"
+            tools:text="Artist Name"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/view_chat_composer_add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_audiotrack_black_24dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description_act_chat_add_iv"/>
+
+        <EditText
+            android:id="@+id/view_chat_composer_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@+id/view_chat_composer_send_button_btn"
+            android:layout_toStartOf="@+id/view_chat_composer_send_button_btn"
+            android:layout_toRightOf="@id/view_chat_composer_add_iv"
+            android:layout_toEndOf="@id/view_chat_composer_add_iv"
+            android:textSize="18sp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_centerVertical="true"
+            android:hint="@string/view_chat_composer_et_input_hint"/>
+
+        <Button
+            android:id="@+id/view_chat_composer_send_button_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/view_chat_composer_btn_send_text"
+            android:textColor="@color/textColorButtonFlat"
+            android:textSize="16sp"
+            style="?attr/borderlessButtonStyle"
+            android:layout_centerVertical="true"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

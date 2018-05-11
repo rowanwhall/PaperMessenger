@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>paper-for-spotify</application>
+    <version>1</version>
+    <threadsafe>true</threadsafe>
+
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+        <!--<property name="gcm.api.key" value="AIzaSyDcXaOFHurz9WmCO-AMNKJW1Yf0J1n64_s"/>-->
+        <property name="gcm.api.key" value="AIzaSyB7IgsO5FsSXAa9q7imu7p0H1XD324ByIk"/>
+    </system-properties>
+</appengine-web-app>

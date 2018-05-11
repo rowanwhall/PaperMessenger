@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/act_settings_category_account">
+
+        <EditTextPreference
+            android:key="settings_preference_change_name"
+            android:title="@string/act_settings_item_name"/>
+
+        <Preference
+            android:key="settings_preference_change_image"
+            android:title="@string/act_settings_item_image"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/act_settings_category_preferences">
+
+        <SwitchPreference
+            android:key="settings_preference_push_notifications"
+            android:title="@string/act_settings_item_push_notifications"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

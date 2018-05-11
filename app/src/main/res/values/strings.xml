@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Paper Messenger</string>
+
+    <string name="act_login_title">@string/app_name</string>
+    <string name="act_login_header">Share your music</string>
+    <string name="act_login_btn_login">Login</string>
+
+    <string name="act_main_tb_title">Paper</string>
+    <string name="act_main_menu_settings">Settings</string>
+    <string name="act_main_menu_logout">Logout</string>
+
+    <string name="frag_chat_list_empty">No chats yet. Add some friends and start one!</string>
+
+    <string name="frag_friends_header_pending">Pending Requests</string>
+    <string name="frag_friends_header_pending_empty">No Pending Requests</string>
+    <string name="frag_friends_header_accepted">Friends</string>
+
+    <string name="act_friend_search_tb_title">Find Friends</string>
+    <string name="act_friend_search_tiet_hint">Enter search terms</string>
+    <string name="act_friend_search_button_search">SEARCH</string>
+
+    <string name="act_messaging_tb_title_default">Chat</string>
+    <string name="act_messaging_menu_set_song">Set Chat Song</string>
+    <string name="act_messaging_menu_set_chat_name">Set Chat Name</string>
+    <string name="act_messaging_menu_view_people">View People</string>
+    <string name="act_messaging_menu_leave_chat">Leave Chat</string>
+    <string name="act_messaging_dialog_leave_chat_title">Leave chat?</string>
+    <string name="act_messaging_dialog_leave_chat_message">You will not be able to undo this decision.</string>
+    <string name="act_messaging_dialog_leave_chat_btn_positive">OK</string>
+    <string name="act_messaging_dialog_leave_chat_btn_negative">Cancel</string>
+
+    <string name="act_chat_participant_tb_title_default">Users in Chat</string>
+
+    <string name="act_player_tb_title">Player</string>
+
+    <string name="view_chat_composer_et_input_hint">Say something!</string>
+    <string name="view_chat_composer_btn_send_text">SEND</string>
+
+    <string name="view_chat_song_header_btn_play">PLAY</string>
+
+    <string name="act_settings_tb_title">Settings</string>
+    <string name="act_settings_category_account">Account</string>
+    <string name="act_settings_item_name">Change Name</string>
+    <string name="act_settings_item_image">Change Profile Picture</string>
+    <string name="act_settings_category_preferences">Preferences</string>
+    <string name="act_settings_item_push_notifications">Push Notifications</string>
+    <string name="act_settings_camera_permissions_denied_dialog_title">Permissions Denied</string>
+    <string name="act_settings_camera_permissions_denied_dialog_message">Please grant the requested permissions in order to open the camera</string>
+
+    <string name="dialog_frag_create_chat_title">Create Chat</string>
+    <string name="dialog_frag_create_chat_name_tiet_hint">Chat name</string>
+    <string name="dialog_frag_create_chat_positive_btn">Create</string>
+    <string name="dialog_frag_create_chat_negative_btn">Cancel</string>
+
+    <string name="dialog_frag_spotify_song_search_title">Search Spotify</string>
+    <string name="dialog_frag_spotify_song_search_tiet_hint">Enter search terms</string>
+    <string name="dialog_frag_spotify_song_search_button_search">SEARCH</string>
+    <string name="dialog_frag_spotify_song_search_positive_btn">Select</string>
+    <string name="dialog_frag_spotify_song_search_negative_btn">Cancel</string>
+
+    <string name="dialog_frag_change_chat_name_title">Set Chat Name</string>
+    <string name="dialog_frag_change_chat_name_tiet_hint">Chat name</string>
+    <string name="dialog_frag_change_chat_name_positive_btn">Submit</string>
+    <string name="dialog_frag_change_chat_name_negative_btn">Cancel</string>
+
+    <string name="dialog_frag_edit_profile_picture_title">Change Profile Picture</string>
+    <string name="dialog_frag_edit_profile_picture_positive_btn">Camera</string>
+    <string name="dialog_frag_edit_profile_picture_negative_btn">Gallery</string>
+    <string name="dialog_frag_edit_profile_picture_neutral_btn">Cancel</string>
+
+    <string name="progress_spotify_login">Authenticating with Spotify for the first time</string>
+    <string name="progress_paper_login">Logging into Paper</string>
+    <string name="progress_paper_create_chat">Creating Chat</string>
+    <string name="progress_paper_store_name">Updating your name</string>
+    <string name="progress_paper_store_image">Uploading your new profile photo</string>
+    <string name="progress_paper_store_image_complete">Upload complete!</string>
+    <string name="progress_paper_add_song">Setting Chat Song</string>
+    <string name="progress_paper_store_chat_name">Setting Chat Name</string>
+    <string name="progress_paper_leaving_chat">Leaving Chat</string>
+    <string name="progress_dialog_generic_message">This will only take a moment.</string>
+
+    <string name="error_network_login_paper">Failed to log in to Paper. Please check your internet connection and login details.</string>
+    <string name="error_network_login_spotify">Failed to log in to Spotify. Please check your internet connection and login details.</string>
+    <string name="error_network_authenticate_spotify">Failed to authenticate with Spotify. Please check your internet connection and try again.</string>
+    <string name="error_network_song_search_spotify">Failed to complete the search. Please check your internet connection and try again.</string>
+    <string name="error_network_chats_paper">Failed to load your chats from Paper. Please check your internet connection.</string>
+    <string name="error_network_friends_paper">Failed to load your friends from Paper. Please check your internet connection.</string>
+    <string name="error_network_send_message_paper">Failed to send your message. Please check your internet connection and try again.</string>
+    <string name="error_network_friend_search_paper">Failed to complete the search. Please check your internet connection and try again.</string>
+    <string name="error_network_create_chat_paper">Failed to create the chat. Please check your internet connection and try again.</string>
+    <string name="error_network_store_name_paper">Failed to update your name. Please check your internet connection and try again.</string>
+    <string name="error_network_store_image_paper">Failed to upload your image. Please check your internet connection and try again.</string>
+    <string name="error_network_add_song_paper">Failed to add your song to the chat. Please check your internet connection and try again.</string>
+    <string name="error_network_store_chat_name_paper">Failed to set chat name. Please check your internet connection and try again.</string>
+    <string name="error_network_chat_participants_paper">Failed to find the users for this chat. Please check your internet connection and try again.</string>
+    <string name="error_network_leave_chat_paper">Failed to leave the chat. Please check your internet connection and try again.</string>
+
+    <string name="error_paper_chat_not_found">Chat not found.</string>
+    <string name="error_paper_song_not_found">Song not found.</string>
+    <string name="error_paper_camera_not_found">Camera not found.</string>
+    <string name="error_paper_file_creation">Unable to create temp file for your profile photo</string>
+    <string name="error_paper_file_not_found">Photo file not found.</string>
+    <string name="error_spotify_player_initialization">Failed to initialize Spotify Player. Reauthenticating…</string>
+    <string name="error_spotify_deauthenticated">You have been deauthenticated from Spotify. Reauthenticating…</string>
+    <string name="error_spotify_track_unavailable">Track Unavailable</string>
+    <string name="error_spotify_unknown">Unknown Error</string>
+
+    <string name="content_description_act_login_logo">App logo on the login screen</string>
+    <string name="content_description_viewholder_chats_list_iv">Album art of song for chat in your chats list</string>
+    <string name="content_description_viewholder_friends_list_iv">Profile picture of a person in your friends list</string>
+    <string name="content_description_viewholder_friends_list_pending_accept_iv">Icon to accept a pending friend request</string>
+    <string name="content_description_viewholder_friends_list_pending_reject_iv">Icon to reject a pending friend request</string>
+    <string name="content_description_viewholder_friend_search_list_iv">Profile picture of a person in your search results</string>
+    <string name="content_description_viewholder_friend_search_list_pending_add_iv">Icon to send a friend request to a person in your search results</string>
+    <string name="content_description_viewholder_message_list_iv">Profile picture of the person who sent the message</string>
+    <string name="content_description_viewholder_create_chat_list_iv">Profile picture of a person in your friends list you can start a chat with</string>
+    <string name="content_description_act_chat_add_iv">Icon to add a song to a message</string>
+    <string name="content_description_viewholder_spotify_song_search_iv">Album art of a song you searched for</string>
+    <string name="content_description_act_player_album_art">Album art of the song in the player</string>
+    <string name="content_description_act_player_play_pause">Button to play or pause a song</string>
+    <string name="content_description_dialog_frag_edit_profile_picture">Your current profile picture that you have elected to change</string>
+</resources>

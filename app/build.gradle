@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "personal.rowan.paperforspotify"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 3
+        versionName "1.2"
+        testInstrumentationRunner "personal.rowan.paperforspotify.TestJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //noinspection GroovyAssignabilityCheck
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    // This library handles authentication and authorization
+    compile 'com.spotify.sdk:spotify-auth:1.0.0-beta12@aar'
+    // This library handles music playback
+    compile 'com.spotify.sdk:spotify-player:1.0.0-beta12@aar'
+
+    // Android support libraries
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+
+    // Google Cloud Messaging
+    compile 'com.google.android.gms:play-services-gcm:9.6.1'
+
+    // OKHttp and Picasso
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
+
+    // Dagger 2
+    apt 'com.google.dagger:dagger-compiler:2.2'
+    compile 'com.google.dagger:dagger:2.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+
+    // Backend project
+    compile project(path: ':backend', configuration: 'android-endpoints')
+
+    // Espresso
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support:support-annotations:24.2.1'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+
+    // Mockito
+    androidTestCompile 'org.mockito:mockito-core:1.9.5'
+    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+
+    // Dagger in testing
+    androidTestApt "com.google.dagger:dagger-compiler:2.2"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/act_messaging_menu_set_song"
+        android:title="@string/act_messaging_menu_set_song"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/act_messaging_menu_set_chat_name"
+        android:title="@string/act_messaging_menu_set_chat_name"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/act_messaging_menu_view_people"
+        android:title="@string/act_messaging_menu_view_people"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/act_messaging_menu_leave_chat"
+        android:title="@string/act_messaging_menu_leave_chat"
+        app:showAsAction="never"/>
+
+</menu>

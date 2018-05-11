@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="personal.rowan.paperforspotify" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <permission
+        android:name="personal.rowan.paperforspotify.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="personal.rowan.paperforspotify.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".manager.PaperApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <meta-data android:name="DATABASE" android:value="paperforspotify.db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="personal.rowan.paperforspotify" />
+
+        <activity
+            android:name="com.spotify.sdk.android.authentication.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity android:name=".ui.activity.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.activity.MainActivity"/>
+
+        <activity android:name=".ui.activity.MessagingActivity"/>
+
+        <activity android:name=".ui.activity.ChatParticipantActivity"/>
+
+        <activity android:name=".ui.activity.FriendSearchActivity"/>
+
+        <activity android:name=".ui.activity.SettingsActivity"/>
+
+        <activity android:name=".ui.activity.PlayerActivity"/>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".data.service.MessageSenderService"
+            android:exported="false"/>
+
+        <service
+            android:name=".data.service.ImageUploadService"
+            android:exported="false"/>
+
+        <service
+            android:name=".data.loader.service.MessageLoaderService"
+            android:exported="false"/>
+
+        <service
+            android:name=".data.loader.service.ChatLoaderService"
+            android:exported="false"/>
+
+        <service
+            android:name=".data.loader.service.FriendLoaderService"
+            android:exported="false"/>
+
+        <service
+            android:name=".data.gcm.PaperRegistrationIntentService"
+            android:exported="false"/>
+
+        <service
+            android:name=".data.gcm.PaperGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".data.gcm.PaperInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

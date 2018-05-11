@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="chat_bubble_corner_radius_rounded">16dp</dimen>
+    <dimen name="chat_bubble_corner_radius_sharp">2dp</dimen>
+</resources>
